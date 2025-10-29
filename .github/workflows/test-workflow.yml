@@ -1,13 +1,13 @@
-name: My First Workflow
-
-on:
-  push:
-    branches: [ main ]
-  workflow_dispatch:
-
-jobs:
-  hello-world:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Use Secret
-        run: echo "Cookie is: ${{ secrets.JD_COOKIE }}"
+name: My First Workflow           # 第1行
+                                  # 第2行（空行）
+on:                               # 第3行
+  push:                           # 第4行（缩进2空格）
+    branches: [ main ]            # 第5行（缩进4空格）
+  workflow_dispatch:              # 第6行（缩进2空格）
+                                  # 第7行（空行）
+jobs:                             # 第8行
+  hello-world:                    # 第9行（缩进2空格）
+    runs-on: ubuntu-latest        # 第10行（缩进4空格）
+    steps:                        # 第11行（缩进4空格）
+      - name: Use Secret          # 第12行（缩进6空格）
+        run: echo "Cookie is: ${{ secrets.JD_COOKIE }}"  # 第13行（缩进8空格）
