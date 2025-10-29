@@ -1,0 +1,16 @@
+name: JD Auto Signin
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  signin-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Test Secret
+        run: echo "JD Cookie is set: ${{ secrets.JD_COOKIE != '' }}"
