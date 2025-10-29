@@ -9,8 +9,5 @@ jobs:
   hello-world:
     runs-on: ubuntu-latest
     steps:
-      - name: Print Welcome Message
-        run: echo "Hello World! This is my first GitHub Action!"
-      
-      - name: Display Current Time
-        run: echo "Current time is $(date)"
+      - name: Use Secret
+        run: echo "Cookie is: ${{ secrets.JD_COOKIE }}"
